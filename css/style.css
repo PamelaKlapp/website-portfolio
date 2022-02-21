@@ -1,0 +1,355 @@
+:root {
+  --primary-color: rgb(98, 149, 245);
+  --secundary-color: rgb(145, 202, 238);
+  --table-color: rgba(126, 167, 243, 0.326);
+  --small-font-size: 16px;
+  --medium-font-size: 20px;
+  --big-font-size: 25px;
+  --large-font-size: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: var(--small-font-size);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+a,
+button {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: var(--big-font-size);
+}
+
+h2 {
+  font-weight: 400;
+  font-size: var(--medium-font-size);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:visited {
+  color: var(--primary-color);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:active {
+  color: rgb(36, 238, 140);
+}
+
+button,
+.button {
+  font-size: var(--large-font-size);
+  font-weight: 500;
+  color: black;
+  background-color: var(--secundary-color);
+  text-decoration: none;
+  text-align: center;
+  border-color: var(--primary-color);
+  border-radius: 3px;
+  padding: 5px 15px;
+  transition: opacity 0.2s;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  padding-left: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--primary-color);
+  text-transform: uppercase;
+  padding: 5px 15px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-color);
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* I´m going to change the picture*/
+#profile_picture {
+  float: left;
+  height: auto;
+  width: 250px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
+/* start grid fallback */
+.project-list__item {
+  display: inline-block;
+  width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+
+  .project-list__item {
+    background-color: rgba(240, 236, 232, 0.565);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+}
+
+/*HEADER*/
+header img {
+  height: 100px;
+}
+
+.header-content {
+  display: flex;
+  width: 100%0;
+  padding: 0 20px;
+  border-bottom: solid 0.5px rgba(167, 167, 167, 0.558);
+}
+
+.header-content__item {
+  flex: 0 1 200px;
+}
+
+.header-content__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/*MAIN*/
+
+main {
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
+.main-about {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#about-picture {
+  width: 500px;
+  height: auto;
+}
+
+.main-contact {
+  margin: auto;
+  text-align: center;
+}
+.main-contact p {
+  max-width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.contact-form {
+  width: 80%;
+  margin: auto;
+}
+
+.contact-form * {
+  width: 100%;
+}
+
+/*FOOTER*/
+footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+footer ul > li {
+  display: inline;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer img {
+  height: 30px;
+  width: 30px;
+}
+
+@media all and (max-width: 500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  #profile_picture {
+    display: block;
+    float: none;
+    width: 100%;
+    margin: auto;
+  }
+  table {
+    font-size: 0.8em;
+  }
+
+  th {
+    padding: 3px 5px;
+  }
+  .header-content__item {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+  .project-list__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes opacity-change {
+  0% {
+    opacity: 0;
+    fill: rgb(221, 163, 54);
+  }
+  40% {
+    opacity: 0.2;
+    fill: rgb(41, 199, 38);
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    fill: rgb(236, 38, 144);
+  }
+}
+
+.sun {
+  animation-name: opacity-change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes cloud-move {
+  0% {
+    transform: translate(40px, -20px);
+  }
+  10% {
+    transform: translate(100px, -20px);
+    transform: scale(1.3, 1);
+  }
+
+  100% {
+    transform: translate(500px, 10px);
+  }
+}
+
+.cloud-front {
+  animation-name: cloud-move;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(500px, 20px);
+  }
+  to {
+    transform: translate(180px, 20px);
+    transform: scale(1.2, 1);
+  }
+}
+
+.cloud-back {
+  animation-name: cloud-move-reverse;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes btn-transition {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+.btn-cv {
+  animation: btn-transition 1s linear infinite alternate;
+}

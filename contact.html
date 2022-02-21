@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is Exercise 4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Pamela Klapp</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+  </head>
+  <body>
+    <header class="header-content">
+      <img
+        src="img/careerfoundry_logo.png"
+        class="header-content__item"
+        alt="logo of Career Foundry"
+      />
+      <nav class="header-content__item">
+        <ul role="menubar">
+          <li role="presentation">
+            <a href="index.html" role="menuitem">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem">About me</a>
+          </li>
+          <li role="presentation">
+            <a href="portfolio.html" role="menuitem">Portfolio</a>
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-contact">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur odio nemo recusandae
+        aliquid molestiae fugit laudantium nihil, rerum nesciunt facere molestias ut nobis impedit
+        ipsa deleniti fugiat tenetur soluta quisquam.
+      </p>
+      <p>Hi there! If you want to keep in contact just write me to</p>
+      <a href="mailto:randomemail@gmail.com">randomemail@gmail.com</a>
+      <br />
+      <p>Or lets have a talk</p>
+      <a href="tel:+49494949499">Tel: +49 4949494949</a>
+      <br />
+      <a href="skype:randomskype">Skype: randomskype</a>
+      <p>Hey Let's keep in touch! Send me a mesagge and I'll write you back as soon as possible.</p>
+      <form class="contact-form" action="http://formsubmit.co/pameklapp@gmail.com" method="post">
+        <label for="username">Your Name</label>
+        <br />
+        <input type="text" name="username" id="username" placeholder="enter your name" required />
+        <br />
+        <label for="email">You Email</label>
+        <br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="enter your email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          required
+        />
+        <br />
+        <label for="mesagge">Your Message</label>
+        <br />
+        <textarea
+          name="message"
+          id="mesagge"
+          cols="30"
+          rows="10"
+          placeholder="Write your comment.."
+        ></textarea>
+        <br />
+        <button type="submit" class="button">Send</button>
+      </form>
+    </main>
+    <footer>
+      <p>Find me on</p>
+      <div class="social-media">
+        <ul>
+          <li>
+            <a href="https://twitter.com/" target="_new">
+              <img src="img/twitter_icon.svg" alt="Twitter Logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/" target="_new">
+              <img src="img/github_icon.svg" alt="Github Logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/" target="_new">
+              <img src="img/linkedin_icon.svg" alt="LinkedIn Logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>

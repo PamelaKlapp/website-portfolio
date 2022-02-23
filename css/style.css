@@ -146,7 +146,7 @@ header img {
 
 .header-content {
   display: flex;
-  width: 100%0;
+  width: 100%;
   padding: 0 20px;
   border-bottom: solid 0.5px rgba(167, 167, 167, 0.558);
 }
